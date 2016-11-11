@@ -1,0 +1,24 @@
+1. package.json, .gitignore, .npmignore
+2. source, test, dist folders
+3. UI folder in source to house the (empty) index.js
+4. Setup babel in package.json
+4a. Install babel dev-dependency
+4b. Babel options file .babelrc
+5. Verified that npm run babel properly bablified my .js files under source (added a test es6 class to help prove it)
+6. Created new repo on github (generated readme added in MIT license)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"babel-loader": "^6.2.7", #webpack loader for babel
+"babel-register": "^6.18.0" #require hook (files pulled in with require with certain extensions will be babelified

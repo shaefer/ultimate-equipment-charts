@@ -1,0 +1,30 @@
+{
+  "name": "ultimate-equipment-charts",
+  "version": "0.0.0",
+  "description": "UI for creation/selection of treasure from the Ultimate Equipment Guide",
+  "main": "source/ui/index.js",
+  "keywords": [
+    "pathfinder",
+    "random charts",
+    "equipment",
+    "magic items",
+    "d&d",
+    "rpg"
+  ],
+  "repository": "github:shaefer/ultimate-equipment-charts",
+  "author": "Daniel Shaefer",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-register": "^6.18.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "babel": "babel source -d dist"
+  }
+}
