@@ -6,6 +6,10 @@
 4b. Babel options file .babelrc
 5. Verified that npm run babel properly bablified my .js files under source (added a test es6 class to help prove it)
 6. Created new repo on github (generated readme added in MIT license)
+7. Added remote git remote add origin git@github.com:shaefer/ultimate-equipment-charts.git
+8. Git pulled the repo to sync with my local one.
+9. Added my files and did "initial" push (actually 2nd commit as github was my 1st)
+
 
 
 
