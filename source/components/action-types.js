@@ -1,0 +1,1 @@
+export const NAME_PICKED = 'NAME_PICKED';

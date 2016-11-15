@@ -20,11 +20,22 @@
     "babel-loader": "^6.2.7",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
-    "babel-register": "^6.18.0"
+    "babel-register": "^6.18.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-bootstrap": "^0.30.6",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0"
+  },
   "scripts": {
-    "babel": "babel source -d dist"
+    "babel": "babel source -d dist",
+    "webpack": "webpack --config source/ui/webpack.config.js",
+    "start": "npm run webpack && webpack-dev-server --content-base source/ui --port 3000"
   }
 }

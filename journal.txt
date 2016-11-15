@@ -9,7 +9,7 @@
 7. Added remote git remote add origin git@github.com:shaefer/ultimate-equipment-charts.git
 8. Git pulled the repo to sync with my local one.
 9. Added my files and did "initial" push (actually 2nd commit as github was my 1st)
-
+//TODO: Build prototype React app with react-bootstrap and get it running with webpack and webpack-dev-server
 
 
 
