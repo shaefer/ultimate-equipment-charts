@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {Grid, Row, Col, Navbar, Nav, NavItem, NavDropdown, MenuItem} from "react-bootstrap";
+import TreasureValueAndType from './TreasureValueAndType'
 
 export class app extends React.Component {
     render() {
@@ -28,15 +29,15 @@ export class app extends React.Component {
 
                 <Grid componentClass="main" fluid={true}>
                     <Row className="show-grid">
-                        <Col md={5}>
+                        <Col md={6}>
                             <section className="panel panel-info">
                                 <header className="panel-heading panel-sm"><h3 className="panel-title">Ultimate Equipment Treasure Generator</h3></header>
                                 <div className="panel-body">
-                                    MAIN CONTENT
+                                    <TreasureValueAndType {...this.props}/>
                                 </div>
                             </section>
                         </Col>
-                        <Col md={7}>
+                        <Col md={6}>
                             <section className="panel panel-info">
                                 <header className="panel-heading panel-sm"><h3 className="panel-title">Right Panel</h3></header>
                                 <div className="panel-body">

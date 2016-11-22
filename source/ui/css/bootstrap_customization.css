@@ -1,0 +1,68 @@
+.panel-sm {
+    padding: 3px 6px;
+}
+
+.bottom-spaced {
+    margin-bottom: 10px;
+}
+
+.topLeft {
+    position: absolute;
+}
+
+.full-label {
+    width: 100%;
+}
+
+.col-no-padding-right {
+    padding-right: 0px;
+}
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+.col-horizontal > label {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+.col-horizontal > input, .col-horizontal > div, .col-horizontal > label{
+    display: inline-block;
+}
+
+.col-horizontal > input {
+    width: auto;
+}
+
+.Select.select-inline {
+    vertical-align: middle;
+}
+
+.Select.select-size {
+    min-width: 150px;
+}
+
+.no-wrap-elements {
+    white-space: nowrap;
+}
+
+.panel > .form-inline > .form-group {
+    padding: 10px 15px;
+}
+
+.panel > .form-inline > .form-group > label.checkbox-inline {
+    margin: 3px 6px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.panel > .form-inline > .form-group > label.checkbox-inline:hover {
+    border-color: #bce8f1;
+    background-color: #d9edf7;
+}
