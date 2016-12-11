@@ -8,6 +8,7 @@ data and rolling.
 Uses ES6 (Babel), React, Redux(immutable state, action creators, thunk), Webpack
 
 Tests
+* npm test (uses mocha and chai and deep-freeze for testing for state mutation)
 
 ## Setup
 * Assumes node installed
