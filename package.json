@@ -37,6 +37,6 @@
   "scripts": {
     "babel": "babel source -d dist",
     "webpack": "webpack --config source/ui/webpack.config.js",
-    "start": "yarn run webpack && webpack-dev-server --config source/ui/webpack.config.js --content-base source/ui --port 3000 --inline --hot"
+    "start": "npm run webpack && webpack-dev-server --config source/ui/webpack.config.js --content-base source/ui --port 3000 --inline --hot"
   }
 }
