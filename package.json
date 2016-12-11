@@ -23,6 +23,10 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
     "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "chance": "^1.0.4",
+    "deep-freeze": "0.0.1",
+    "mocha": "^3.2.0",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   },
@@ -37,6 +41,7 @@
   "scripts": {
     "babel": "babel source -d dist",
     "webpack": "webpack --config source/ui/webpack.config.js",
+    "test": "mocha --opts ./test/mocha.opts ./test",
     "start": "npm run webpack && webpack-dev-server --config source/ui/webpack.config.js --content-base source/ui --port 3000 --inline --hot"
   }
 }
