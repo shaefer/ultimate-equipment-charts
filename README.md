@@ -1,5 +1,6 @@
 # ultimate-equipment-charts
-![travis build](https://travis-ci.org/shaefer/ultimate-equipment-charts.svg?branch=master)
+
+[<img src="https://travis-ci.org/shaefer/ultimate-equipment-charts.svg?branch=master">](https://travis-ci.org/shaefer/ultimate-equipment-charts)
 
 A small project to create a UI for the generation of treasure based on the method described in the
 [Pathfinder Ultimate Equipment](http://paizo.com/pathfinderRPG/prd/ultimateEquipment/appendix.html)
