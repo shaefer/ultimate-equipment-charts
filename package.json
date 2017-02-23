@@ -39,6 +39,7 @@
     "redux-thunk": "^2.1.0"
   },
   "scripts": {
+    "setup": "npm install",
     "babel": "babel source -d dist",
     "webpack": "webpack --config source/ui/webpack.config.js",
     "test": "mocha --opts ./test/mocha.opts ./test",
