@@ -4,6 +4,8 @@ import { treasureValueChangeHandler, treasureTypeSelectHandler } from './action-
 import {Form, FormGroup, ControlLabel, FormControl, Checkbox} from "react-bootstrap";
 
 export class treasureValueAndType extends React.Component {
+
+
     render() {
         const treasureTypesOn = this.props.treasureTypesOn;
         return (
