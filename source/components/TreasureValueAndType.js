@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { treasureValueChangeHandler, treasureTypeSelectHandler } from './action-creators'
-import {Form, FormGroup, ControlLabel, FormControl, Checkbox} from "react-bootstrap";
+import {Form, FormGroup, ControlLabel, FormControl, Checkbox, Col} from "react-bootstrap";
 
 export class treasureValueAndType extends React.Component {
 
@@ -23,6 +23,20 @@ export class treasureValueAndType extends React.Component {
                             return <Checkbox inline key={treasureType.letter} selected={selected} onChange={this.props.treasureTypeSelectHandler} value={treasureType.letter}>{treasureType.letter} {treasureType.title}</Checkbox>
                         }) }
                     </FormGroup>
+                </Form>
+                <Form horizontal>
+                  { this.props.treasureTypes.map((treasureType) => {
+                      const selected = treasureTypesOn.indexOf(treasureType.letter) != -1;
+                      if (selected) {
+                        return (
+                          <FormGroup controlId={treasureType.title}>
+                            <Col sm={5} componentClass={ControlLabel}>{treasureType.title} Value</Col>
+                            <Col sm={7}><FormControl type="text" key={treasureType.letter}Value/></Col>
+                          </FormGroup>
+                        );
+                      }
+                    })
+                  }
                 </Form>
             </section>
         );
