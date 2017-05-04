@@ -66,3 +66,13 @@
     border-color: #bce8f1;
     background-color: #d9edf7;
 }
+
+form > div.form-group > label.leftAlign {
+  text-align: left;
+  padding-left: 0;
+}
+
+.form-horizontal .form-group {
+  margin-right: 0;
+  margin-left: 0;
+}

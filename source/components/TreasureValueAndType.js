@@ -11,7 +11,7 @@ export class treasureValueAndType extends React.Component {
         return (
             <section className="panel panel-primary">
                 <header className="panel-heading panel-sm">Treasure Value and Types</header>
-                <Form inline >
+                <Form inline>
                     <FormGroup controlId="formInlineName">
                         <ControlLabel>Treasure Value</ControlLabel>
                         {' '}
@@ -29,14 +29,15 @@ export class treasureValueAndType extends React.Component {
                       const selected = treasureTypesOn.indexOf(treasureType.letter) != -1;
                       if (selected) {
                         return (
-                          <FormGroup controlId={treasureType.title}>
-                            <Col sm={5} componentClass={ControlLabel}>{treasureType.title} Value</Col>
-                            <Col sm={7}><FormControl type="text" key={treasureType.letter}Value/></Col>
+                          <FormGroup controlId={treasureType.title} key={treasureType.letter + "Value"}>
+                            <Col sm={5}><FormControl type="text" /></Col>
+                            <Col sm={7} componentClass={ControlLabel} className="leftAlign">{treasureType.letter} - {treasureType.title} Value</Col>
                           </FormGroup>
                         );
                       }
                     })
                   }
+                  <footer style={{marginBottom: '15px'}}></footer>
                 </Form>
             </section>
         );
