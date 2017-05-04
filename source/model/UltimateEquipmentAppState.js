@@ -13,6 +13,7 @@ const appState = {
     new TreasureType("I", "Treasure Hoard")
   ],
   treasureTypesOn: [],
+  treasureTypeValues: {},
   treasureValue: 0
 }
 export default appState;

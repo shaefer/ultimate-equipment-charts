@@ -1,9 +1,14 @@
 import * as Actions from './action-types'
+
+
 const reducer = (state, action) => {
     switch (action.type) {
         case Actions.TREASURE_VALUE_CHANGED:
-            console.warn(`new value: ${action.value}`);
-            return { ...state, treasureValue: action.value };
+            console.warn(`new value: ${action.value} for letter ${action.letter}`);
+            const values = state.treasureTypeValues;
+            const newValues = { ...values, [`${action.letter}`]: action.value};
+            const newProps = {treasureTypeValues: newValues};
+            return { ...state, ...newProps };
         case Actions.TREASURE_TYPE_CHANGED: {
             const checked = action.checked;
             const treasureType = action.treasureType;

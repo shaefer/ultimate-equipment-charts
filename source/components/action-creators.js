@@ -1,13 +1,11 @@
 import * as Actions from './action-types'
 
-export const treasureValueChangeHandler = (event) => {
+export const treasureValueChangeHandler = (treasureTypeLetter, newVal) => {
     return (dispatch, getState) => {
-        let newVal = event.target.value;
-        console.log("Treasure value Change event fired: value: " + newVal);
-        if (newVal)
-            newVal = parseInt(newVal, 10);
+        console.log("Treasure value Change event fired: value: " + newVal + " for letter: " + treasureTypeLetter);
         dispatch({
             type: Actions.TREASURE_VALUE_CHANGED,
+            letter: treasureTypeLetter,
             value: newVal
         });
     }
