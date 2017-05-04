@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { treasureValueChangeHandler, treasureTypeSelectHandler } from './action-creators'
-import {Form, FormGroup, ControlLabel, FormControl, Checkbox, Col} from "react-bootstrap";
+import { treasureValueChangeHandler, treasureTypeSelectHandler, generateTreasure } from './action-creators'
+import {Form, FormGroup, ControlLabel, FormControl, Checkbox, Col, Button} from "react-bootstrap";
 
 export class treasureValueAndType extends React.Component {
 
@@ -9,6 +9,7 @@ export class treasureValueAndType extends React.Component {
       super(props);
       this.validateValues.bind(this);
       this.getTotalValueOfTreasure.bind(this);
+      this.displayButton.bind(this);
     }
 
     validateValues(letter, val) {
@@ -30,6 +31,18 @@ export class treasureValueAndType extends React.Component {
           }
       });
       return total;
+    }
+
+    displayButton() {
+      if (this.getTotalValueOfTreasure() > 0) {
+        return (
+          <FormGroup>
+            <Col sm={12}>
+            <Button onClick={this.props.generateTreasure}>Generate Treasure</Button>
+            </Col>
+          </FormGroup>
+        );
+      }
     }
 
     render() {
@@ -67,6 +80,7 @@ export class treasureValueAndType extends React.Component {
                       }
                     })
                   }
+                  { this.displayButton() }
                   <footer style={{marginBottom: '15px'}}></footer>
                 </Form>
             </section>
@@ -85,7 +99,7 @@ const mergeProps = (state, actions, ownProps) => {
 
 const TreasureValueAndType = connect(
     mapStateToProps,
-    { treasureValueChangeHandler, treasureTypeSelectHandler}, //action creators rather than mapDispatchToProps
+    { treasureValueChangeHandler, treasureTypeSelectHandler, generateTreasure }, //action creators rather than mapDispatchToProps
     mergeProps
 )(treasureValueAndType);
 

@@ -9,7 +9,7 @@ const reducer = (state, action) => {
             const newValues = { ...values, [`${action.letter}`]: action.value};
             const newProps = {treasureTypeValues: newValues};
             return { ...state, ...newProps };
-        case Actions.TREASURE_TYPE_CHANGED: {
+        case Actions.TREASURE_TYPE_CHANGED:
             const checked = action.checked;
             const treasureType = action.treasureType;
             const newTreasureTypesOn = [...state.treasureTypesOn];
@@ -20,7 +20,10 @@ const reducer = (state, action) => {
                 newTreasureTypesOn.splice(indexOfTreasureType, 1);
             console.warn(newTreasureTypesOn);
             return { ...state, treasureTypesOn:newTreasureTypesOn}
-        }
+        case Actions.GENERATE_TREASURE:
+            console.log("Generating treasure");
+            //TODO: Decide where to actually call treasure generation?
+            return state;
         default:
             return state;
     }

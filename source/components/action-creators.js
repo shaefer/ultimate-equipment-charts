@@ -21,3 +21,11 @@ export const treasureTypeSelectHandler = (event) => {
         });
     }
 };
+
+export const generateTreasure = () => {
+  return (dispatch, getState) => {
+    dispatch({
+        type: Actions.GENERATE_TREASURE
+    });
+  }
+};
