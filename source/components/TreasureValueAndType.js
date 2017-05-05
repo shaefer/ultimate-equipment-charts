@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { treasureValueChangeHandler, treasureTypeSelectHandler, generateTreasure } from './action-creators'
 import {Form, FormGroup, ControlLabel, FormControl, Checkbox, Col, Button} from "react-bootstrap";
+import * as Charts from 'random-charts'
 
 export class treasureValueAndType extends React.Component {
 
@@ -10,6 +11,7 @@ export class treasureValueAndType extends React.Component {
       this.validateValues.bind(this);
       this.getTotalValueOfTreasure.bind(this);
       this.displayButton.bind(this);
+      this.handleGenerateButton.bind(this);
     }
 
     validateValues(letter, val) {
@@ -33,12 +35,27 @@ export class treasureValueAndType extends React.Component {
       return total;
     }
 
+    handleGenerateButton() {
+      console.log("Form generate Button handling")
+      console.log(RandomChart, TreasureTypeB);
+      const TreasureTypeB = Charts.TreasureTypeB.default;
+      //const GetRandomGenerator = Charts.GetRandomGenerator;
+      const RandomChart = Charts.RandomChart.default;
+
+      const treasureTypeBChart = new RandomChart(TreasureTypeB.tables);
+      const resultSet = treasureTypeBChart.get();
+      console.log(resultSet.toArray())
+      console.log(resultSet.toString())
+
+      this.props.generateTreasure();
+    }
+
     displayButton() {
       if (this.getTotalValueOfTreasure() > 0) {
         return (
           <FormGroup>
             <Col sm={12}>
-            <Button onClick={this.props.generateTreasure}>Generate Treasure</Button>
+            <Button onClick={this.handleGenerateButton.bind(this)}>Generate Treasure</Button>
             </Col>
           </FormGroup>
         );
